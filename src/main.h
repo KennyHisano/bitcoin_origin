@@ -26,7 +26,7 @@ static const CBigNum bnProofOfWorkLimit(~uint256(0) >> 32);
 
 
 
-extern CCriticalSection cs_main;
+extern CCriticalSection cs_main;//extern as global declearation
 extern map<uint256, CBlockIndex*> mapBlockIndex;
 extern const uint256 hashGenesisBlock;
 extern CBlockIndex* pindexGenesisBlock;
@@ -827,7 +827,7 @@ public:
 
     IMPLEMENT_SERIALIZE
     (
-        READWRITE(this->nVersion);
+        READWRITE(this->nVersion);//READWRITE defined in serialize.h
         nVersion = this->nVersion;
         READWRITE(hashPrevBlock);
         READWRITE(hashMerkleRoot);

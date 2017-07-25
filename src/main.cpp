@@ -14,8 +14,8 @@
 //
 
 CCriticalSection cs_main;
-
-map<uint256, CTransaction> mapTransactions;
+//check main.h for CTransaction. Cblockindex.
+map<uint256, CTransaction> mapTransactions; //here the map specifies the input as uint256 and Creansaction(below)
 CCriticalSection cs_mapTransactions;
 unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;

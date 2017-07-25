@@ -2,16 +2,16 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifdef _MSC_VER
-#pragma warning(disable:4786)
+#ifdef _MSC_VER //check whether _msc_VER is defined, to check whether compiling with visual studio or not.
+#pragma warning(disable:4786)// excute only once. it will disable warnings from specified numbers.
 #pragma warning(disable:4804)
 #pragma warning(disable:4717)
 #endif
-#ifdef _WIN32_WINNT
+#ifdef _WIN32_WINNT //spefify version of windows winnt, 2000, 2003
 #undef _WIN32_WINNT
 #endif
-#define _WIN32_WINNT 0x0400
-#define WIN32_LEAN_AND_MEAN 1
+#define _WIN32_WINNT 0x0400 //0x0400 for winnt4,0 
+#define WIN32_LEAN_AND_MEAN 1 //defined followed by 1. it excludes unneeded api.
 #include <wx/wx.h>
 #include <wx/clipbrd.h>
 #include <wx/snglinst.h>
