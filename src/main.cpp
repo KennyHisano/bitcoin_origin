@@ -16,11 +16,14 @@
 CCriticalSection cs_main;
 //check main.h for CTransaction. Cblockindex.
 map<uint256, CTransaction> mapTransactions; //here the map specifies the input as uint256 and Creansaction(below)
+//usage example of mapTransactions could be like mapTransactions[uint256]
+//Ctransaction is used for transaction
 CCriticalSection cs_mapTransactions;
 unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
+//CBlockIndex class main.h 1009~
 const uint256 hashGenesisBlock("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f");
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
