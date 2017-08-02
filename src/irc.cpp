@@ -268,7 +268,7 @@ void ThreadIRCSeed(void* parg)
 
 
 
-
+//start!
 
 #ifdef TEST
 int main(int argc, char *argv[])
